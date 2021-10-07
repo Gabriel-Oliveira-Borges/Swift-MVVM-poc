@@ -21,7 +21,6 @@
 		DBF3D9282709F4F000AF7831 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3D9272709F4F000AF7831 /* UserListViewModel.swift */; };
 		DBF3D92A2709F4FD00AF7831 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3D9292709F4FD00AF7831 /* UserListViewController.swift */; };
 		DBF3D92C270B1DAD00AF7831 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3D92B270B1DAD00AF7831 /* User.swift */; };
-		DBF3D931270B210200AF7831 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3D930270B210200AF7831 /* BaseViewModel.swift */; };
 		DBF3D933270B212E00AF7831 /* UserListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3D932270B212E00AF7831 /* UserListViewState.swift */; };
 		DBF3D935270B224200AF7831 /* UserListViewModelAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3D934270B224200AF7831 /* UserListViewModelAction.swift */; };
 		DBF3D93A270B26B900AF7831 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3D939270B26B900AF7831 /* UserRepository.swift */; };
@@ -50,7 +49,6 @@
 		DBF3D9272709F4F000AF7831 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		DBF3D9292709F4FD00AF7831 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		DBF3D92B270B1DAD00AF7831 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		DBF3D930270B210200AF7831 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		DBF3D932270B212E00AF7831 /* UserListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewState.swift; sourceTree = "<group>"; };
 		DBF3D934270B224200AF7831 /* UserListViewModelAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModelAction.swift; sourceTree = "<group>"; };
 		DBF3D939270B26B900AF7831 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
@@ -195,17 +193,8 @@
 			children = (
 				DBF3D945270B2E7000AF7831 /* Data */,
 				DBF3D93F270B294400AF7831 /* Framework */,
-				DBF3D92E270B20E000AF7831 /* Presentation */,
 			);
 			path = Bases;
-			sourceTree = "<group>";
-		};
-		DBF3D92E270B20E000AF7831 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				DBF3D930270B210200AF7831 /* BaseViewModel.swift */,
-			);
-			path = Presentation;
 			sourceTree = "<group>";
 		};
 		DBF3D93E270B28B500AF7831 /* Responses */ = {
@@ -375,7 +364,6 @@
 				DBF3D9282709F4F000AF7831 /* UserListViewModel.swift in Sources */,
 				DB7F948C270C88BA00F5441D /* UserControllerViewModelAction.swift in Sources */,
 				DBF3D948270B2E8D00AF7831 /* BaseMapper.swift in Sources */,
-				DBF3D931270B210200AF7831 /* BaseViewModel.swift in Sources */,
 				DB7F948A270C88AC00F5441D /* UserDetailViewState.swift in Sources */,
 				DBF3D92A2709F4FD00AF7831 /* UserListViewController.swift in Sources */,
 				DBF3D92C270B1DAD00AF7831 /* User.swift in Sources */,

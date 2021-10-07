@@ -6,14 +6,11 @@
 //
 import Foundation
 
-class UserListViewModel : BaseViewModel<UserListViewState, UserListViewModelAction> {
+class UserListViewModel {
     private let userRepository = UserRepository()
+    let viewState = UserListViewState()
     
-    init() {
-        super.init(viewState: UserListViewState())
-    }
-    
-    override func dispatchViewModelAction(action: UserListViewModelAction) {
+    func dispatchViewModelAction(action: UserListViewModelAction) {
         switch action {
             case .Init: onInit()
         }
@@ -22,7 +19,9 @@ class UserListViewModel : BaseViewModel<UserListViewState, UserListViewModelActi
     private func fetchUsers() {
         Task.init(priority: .background) {
             switch await self.userRepository.getUsers() {
-                case .success(let users): self.viewState.users.onNext(users)
+                case .success(let users): do {
+                    self.viewState.users.onNext(users)
+                }
                 case .failure: self.viewState.notification.onNext(.ShowGenericAlert(title: "Erro", message: "Ocorreu um erro ao pegar os usuarios"))
             }
         }

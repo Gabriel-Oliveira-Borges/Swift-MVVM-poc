@@ -7,13 +7,10 @@
 
 import Foundation
 
-class UserDetailViewModel: BaseViewModel<UserDetailViewState, UserDetailViewModelAction> {
+class UserDetailViewModel {
+    let viewState = UserDetailViewState()
     
-    init() {
-        super.init(viewState: UserDetailViewState())
-    }
-    
-    override func dispatchViewModelAction(action: UserDetailViewModelAction) {
+    func dispatchViewModelAction(action: UserDetailViewModelAction) {
         switch action {
             case .setUser(let user): viewState.user.onNext(user)
         }

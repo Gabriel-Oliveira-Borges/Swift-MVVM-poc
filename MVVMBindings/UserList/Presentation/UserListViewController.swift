@@ -17,8 +17,8 @@ class UserListViewController: UIViewController, UITableViewDataSource, UITableVi
     private let bag = DisposeBag()
 
     override func viewDidLoad() {
-//        bindTableView()
-        observeUsers()
+        bindTableView()
+//        observeUsers()
         
         observeNotifications()
         viewModel.dispatchViewModelAction(action: .Init)
@@ -33,11 +33,13 @@ class UserListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     private func showAlert(_ title: String, _ message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Ok", style: .default))
-        
-        present(alert, animated: true)
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default))
+            
+            self.present(alert, animated: true)
+        }
     }
     
     //MARK: - Usando RxSwift para atualizar a tableView quando o array de usuarios muda
